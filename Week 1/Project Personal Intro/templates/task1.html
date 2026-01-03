@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Program</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Get To Introduction Program</h1>
+
+        <div class="program-stages">
+            <div class="stage stage-1">
+                <h3 class="stage-title">Stage 1: The Input Form</h3>
+                <div class="card card-input">
+                    <p class="greeting">
+                        <span class="emoji">👋</span> Welcome! Let's get acquainted.
+                    </p>
+                    <p class="subtext">Just a few quick details to personalize your experience.</p>
+                    
+                    <form action="/result" method="POST">
+                        <div class="input-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                    
+                        <div class="input-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" name="age" placeholder="28" required>
+                        </div>
+                    
+                        <div class="input-group">
+                            <label for="hobby">
+                                <span class="input-icon">📍</span> What do you love to do for fun?
+                            </label>
+                            <input type="text" id="hobby" name="hobby" placeholder="Hiking, Painting, Coding">
+                        </div>
+                    
+                        <button type="submit" class="btn-primary">
+                            Say Hello! <span class="emoji">✨</span>
+                        </button>
+                    </form>                    
+                </div>
+            </div>
+
+            <!-- <div class="stage stage-2">
+                <h3 class="stage-title">Stage 2: The Output Display</h3>
+                <div id="output-card" class="card card-output">
+                    <p>Start typing to see the real-time output!</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</body>
+</html>

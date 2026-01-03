@@ -1,0 +1,243 @@
+/* Basic Reset and Variables */
+:root {
+    --primary-color: #ff6b6b; /* Reddish tone for the button */
+    --secondary-bg: #ffffff;
+    --card-bg: #ffffff;
+    --text-color: #4a4a4a;
+    --light-blue: #e3f2fd;
+    --medium-blue: #bbdefb;
+    --border-radius: 20px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   
+    background-image: url("/static/shapes.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    font-family: 'Poppins', sans-serif;
+    /* background: linear-gradient(135deg, var(--light-blue) 0%, var(--medium-blue) 100%); */
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container and Main Title */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Program Stages Layout (Flexbox) */
+.program-stages {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.stage {
+    flex: 1;
+    min-width: 350px;
+}
+
+.stage-title {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* Card Styling */
+.card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 480px; /* Ensure visual balance */
+}
+
+.card-output {
+    background: rgba(255, 255, 255, 0.55);   /* 55% opaque */
+    backdrop-filter: blur(12px);             /* beautiful glass effect */
+    -webkit-backdrop-filter: blur(12px);     /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Text and Headings */
+.greeting {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.emoji {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.subtext {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Form Styling */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.3s;
+    background-color: #f9f9f9;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background-color: #fff;
+}
+
+.input-icon {
+    margin-right: 5px;
+}
+
+/* Button Styling */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 5px 15px rgb(104, 174, 203);
+}
+
+.btn-primary:hover {
+    background-color: rgb(24, 133, 179);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid rgb(24, 133, 179);
+    color: rgb(24, 133, 179);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Output Card Styling (Stage 2) */
+.output-name {
+    font-size: 2em;
+    font-weight: 700;
+    color: rgb(24, 133, 179);
+    margin-bottom: 20px;
+}
+
+.snapshot-header {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.output-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.output-list li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.output-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: 900;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.adventure-text {
+    font-size: 0.95em;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 850px) {
+    .program-stages {
+        flex-direction: column;
+        align-items: center;
+    }
+    .stage {
+        min-width: unset;
+        width: 100%;
+        max-width: 450px;
+    }
+    .container {
+        padding: 20px;
+    }
+}
