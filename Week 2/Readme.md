@@ -13,9 +13,9 @@ A Flask-based web application designed to help students calculate academic perfo
 - **Frontend:** HTML5, CSS3 (Flexbox, Absolute Positioning)
 
 ## 📸 Preview
-![Grade App Interface]()
+![Grade App Interface](Week 2/Project Grade_app Screenshots/Screen1.png)
 
 ## 📖 How to Run
 1. Install Flask: `pip install flask`
 2. Run `python gradecalculator.py`
-3. Visit `http://127.0.0.1:5000/`
+4. Visit `http://127.0.0.1:5000/`
