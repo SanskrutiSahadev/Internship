@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GradeBoost!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-card">
+            <h1 class="title">GradeBoost!</h1>
+            <p class="subtitle">Calculate Your Success!</p>
+            <form action="/result" method="POST">
+                <label>Math</label>
+                <input type="number" name="math" placeholder="eg., 85" required>
+                <label>Science</label>
+                <input type="number" name="science" placeholder="eg., 85" required>
+                <label>English</label>
+                <input type="number" name="english" placeholder="eg., 85" required>
+                <button type="submit">Calculate Grade</button>
+            </form>
+            <p class="footer">Built with 💜 by Sanskruti</p>
+        </div>
+
+        <div class="right-side">
+            <div class="speech-bubble">You've got this!</div>
+            <img src="{{ url_for('static', filename='student.png') }}" class="character-img">
+            
+            <div class="result-card">
+                <h2 style="margin:0; color:#331D52; text-align: center;">Ready to start?</h2>
+                <p style="margin: 8px 0 0 0; color: #666; text-align: center; font-weight: 600;">
+                    Fill the form to see your results!
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

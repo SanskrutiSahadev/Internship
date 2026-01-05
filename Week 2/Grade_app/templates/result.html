@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Grade</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-card">
+            <h1 class="title">GradeBoost!</h1>
+            <p class="subtitle">Your Grade Summary</p>
+            
+            <div style="flex-grow: 1;"></div> <a href="/" style="text-decoration:none;">
+                <button type="button">Calculate Again</button>
+            </a>
+            <p class="footer">Built with 💜 by Sanskruti</p>
+        </div>
+
+        <div class="right-side">
+            <div class="speech-bubble">You did it!</div>
+            <img src="{{ url_for('static', filename='student.png') }}" class="character-img">
+            
+            <div class="result-card">
+                <h2 style="margin:0; color:#331D52; font-size: 24px;">{{ heading }}</h2>
+                <div class="grade-info-flex">
+                    <img src="{{ url_for('static', filename='badge.png') }}" class="grade-badge">
+                    <div>
+                        <p style="margin:0; font-size: 18px;"><strong>Overall Grade: {{ grade }}!</strong></p>
+                        <p style="margin:4px 0 0 0; font-size:13px; color:#555; line-height: 1.4;">{{ message }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

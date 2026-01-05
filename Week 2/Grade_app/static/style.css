@@ -1,0 +1,126 @@
+/* ----- GLOBAL STYLES ----- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f3effe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    max-width: 1100px;
+    background: #E8E2F7;
+    border-radius: 35px;
+    padding: 40px;
+    display: flex;
+    gap: 30px;
+    align-items: stretch; /* Keeps left and right box heights identical */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* ----- LEFT FORM CARD  ----- */
+.form-card {
+    background: white;
+    flex: 0 0 500px; 
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 550px; 
+}
+
+.title { font-size: 36px; font-weight: 700; color: #5e2671; margin-bottom: 5px; }
+.subtitle { color: #6a5d7b; margin-bottom: 30px; }
+
+label { display: block; font-size: 14px; color: #4b3d6a; margin-bottom: 8px; font-weight: 600; }
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e3ef;
+    background-color: #faf8ff;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background: #5e2671;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { background: #4a1d5a; transform: translateY(-2px); }
+
+/* ----- RIGHT SIDE  ----- */
+.right-side {
+    flex: 1;
+    background: linear-gradient(145deg, #331D52, #24143a);
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 12px solid #fff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    min-height: 550px;
+}
+
+.character-img { 
+    width: 75%; 
+    z-index: 1; 
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.4));
+}
+
+.speech-bubble {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    background: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    color: #331D52;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 20px;
+    border-width: 10px 10px 0 0;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+/* Floating Card Base */
+.result-card {
+    position: absolute;
+    bottom: 25px;
+    background: white;
+    width: 90%;
+    padding: 25px;
+    border-radius: 20px;
+    z-index: 5;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    box-sizing: border-box;
+}
+
+.grade-info-flex { display: flex; align-items: center; gap: 15px; margin-top: 10px; }
+.grade-badge { width: 55px; }
+.footer { margin-top: 20px; font-size: 13px; color: #888; }
