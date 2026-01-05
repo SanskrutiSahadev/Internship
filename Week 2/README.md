@@ -19,4 +19,4 @@ A Flask-based web application designed to help students calculate academic perfo
    
 ## 📸 Preview
 Grade App Interface
-<img width="1724" height="859" alt="Screen1" src="https://github.com/user-attachments/assets/31218eef-e34f-4350-8493-a46e852deaac" />
+<img width="1659" height="861" alt="Screen1" src="https://github.com/user-attachments/assets/cc4e1c09-9987-4a42-bb7e-c0e7aca5733d" />
